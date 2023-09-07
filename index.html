@@ -4,56 +4,154 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>도면 생성기</title>
+  <meta name="viewport" content="width=794">
+  <title>발주서 만들기</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.6.2.js" integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4="
     crossorigin="anonymous"></script>
   <script src="./html2canvas.js"></script>
+  <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="rec-wrap" id="capture">
-      <div class="rec-box">
-        <div class="rec lg">
-          <div class="txt-box">
-            <p contenteditable="true">
-              64K * 43.4T * 1000 * 2000 = 200 SET
-            </p>
-            <p contenteditable="true">
-              그라스울
-            </p>
-          </div>
-          <div class="h-line lg">
-            <p>
-              <span contenteditable="true">1000</span>
-            </p>
-          </div>
-        </div>
-        <div class="rec sm">
-          <div class="h-line sm">
-            <p>
-              <span contenteditable="true">100</span>
-            </p>
-          </div>
-        </div>
-        <div class="v-line">
-          <p>
-            <span contenteditable="true">100</span>
-          </p>
-          <p>
-            <span contenteditable="true">100</span>
-          </p>
-          <p>
-            <span contenteditable="true">100</span>
-          </p>
-        </div>
-      </div>
+  <div class="a4-wrap" id="capture">
+    <div class="inner-wrap">
+      <h1>발주서</h1>
+      <table>
+        <colgroup>
+          <col width="18%">
+          <col width="*">
+          <col width="18%">
+          <col width="*">
+        </colgroup>
+        <thead>
+          <tr>
+            <td colspan="4">
+              <div class="logo-box">
+                <img src="./images/img-logo.png" alt="대동이엔지">
+              </div>
+              </span>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><span>주문번호</span></th>
+            <td colspan="3"><span contenteditable="true">0000-0000-0000</span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span>사업자등록번호</span></th>
+            <td><span>141-87-00205</span></td>
+            <th scope="row"><span>회사명/대표</span></th>
+            <td><span>(주)대동이엔지 대표이사 권희성</span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span>주소</span></th>
+            <td><span>충북 진천군 덕산읍 귀농2길 56 (주)대동이엔지</span></td>
+            <th scope="row"><span>담당자</span></th>
+            <td><span>강민 차장 <br>010-8315-2882</span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span>청구일자</span></th>
+            <td><span contenteditable="true" class="today">2023-09-07</span></td>
+            <th scope="row"><span>납품기일</span></th>
+            <td><span contenteditable="true">긴급</span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span>현장명</span></th>
+            <td><span contenteditable="true">대동 외주</span></td>
+            <th scope="row"><span>청구인</span></th>
+            <td><span contenteditable="true">발주 담당</span></td>
+          </tr>
+          <tr>
+            <td colspan="4" class="td-img-box">
+              <div class="rec-wrap">
+                <div class="rec-box">
+                  <div class="rec lg">
+                    <div class="txt-box">
+                      <p contenteditable="true">
+                        64K * 43.4T * 1000 * 2000 = 200 SET
+                      </p>
+                      <p contenteditable="true">
+                        그라스울
+                      </p>
+                    </div>
+                    <div class="h-line lg">
+                      <p>
+                        <span contenteditable="true">1000</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="rec sm">
+                    <div class="h-line sm">
+                      <p>
+                        <span contenteditable="true">100</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="v-line">
+                    <p>
+                      <span contenteditable="true">100</span>
+                    </p>
+                    <p>
+                      <span contenteditable="true">100</span>
+                    </p>
+                    <p>
+                      <span contenteditable="true">100</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="rec-wrap">
+                <div class="rec-box">
+                  <div class="rec lg">
+                    <div class="txt-box">
+                      <p contenteditable="true">
+                        64K * 43.4T * 1000 * 2000 = 200 SET
+                      </p>
+                      <p contenteditable="true">
+                        그라스울
+                      </p>
+                    </div>
+                    <div class="h-line lg">
+                      <p>
+                        <span contenteditable="true">1000</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="rec sm">
+                    <div class="h-line sm">
+                      <p>
+                        <span contenteditable="true">100</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="v-line">
+                    <p>
+                      <span contenteditable="true">100</span>
+                    </p>
+                    <p>
+                      <span contenteditable="true">100</span>
+                    </p>
+                    <p>
+                      <span contenteditable="true">100</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </div>
+  <div class="button-wrap">
     <div class="master-panel">
       <button class="btn" id="initialize">Reset</button>
-      <button class="btn" id="export">Generate</button>
+      <button class="btn primary" id="export">Generate Image</button>
+      <button class="btn primary" id="pdf">Generate PDF</button>
+      <button class="btn primary" id="pdf" onclick="print()">Print</button>
     </div>
   </div>
   <section class="mod capture-modal hidden"></section>
