@@ -9,7 +9,7 @@ $(document).ready(function (e) {
     })
   });
 
-  // HTML2CANVAS API
+  // 이미지 생성
   const produceImageBtn = document.querySelector('#export');
   const captureModal = document.querySelector('.capture-modal');
   const mod = document.querySelectorAll('.mod');
@@ -46,7 +46,7 @@ $(document).ready(function (e) {
     }
   });
 
-  
+  // PDF 생성
   function pdfPrint() {
     window.jsPDF = window.jspdf.jsPDF;
     $('body').addClass('capture-mode');
@@ -90,6 +90,16 @@ $(document).ready(function (e) {
     pdfPrint();
   });
 
+  // 청구 일자 오늘 날짜로 업데이트
+  const newDate = new Date(); 
+
+  const year = newDate.getFullYear(); // 년도
+  const month = newDate.getMonth() + 1;  // 월
+  const date = newDate.getDate();  // 날짜
+
+  const today = year + '-' + (month < 10 ? '0' + month : month) + '-' + (date < 10 ? '0' + date : date);
+
+  $('.today').text(today)
 }); // end of ready
 
 
