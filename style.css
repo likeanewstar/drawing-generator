@@ -47,6 +47,7 @@ h1 {
   padding: 15px 0;
   font-size: 4rem;
   line-height: 5rem;
+  letter-spacing: 8px;
   text-align: center;
 }
 
@@ -237,6 +238,7 @@ table td.td-img-box {
 
 .btn {
   width: 192px;
+  max-width: 22%;
   height: 40px;
   border: 1px solid #5a19da;
   border-radius: 20px;
