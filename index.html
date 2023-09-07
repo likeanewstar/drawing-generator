@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>도면 생성기</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.2.js" integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4="
+    crossorigin="anonymous"></script>
+  <script src="./html2canvas.js"></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="rec-wrap" id="capture">
+      <div class="rec-box">
+        <div class="rec lg">
+          <div class="txt-box">
+            <p contenteditable="true">
+              64K * 43.4T * 1000 * 2000 = 200 SET
+            </p>
+            <p contenteditable="true">
+              그라스울
+            </p>
+          </div>
+          <div class="h-line lg">
+            <p>
+              <span contenteditable="true">1000</span>
+            </p>
+          </div>
+        </div>
+        <div class="rec sm">
+          <div class="h-line sm">
+            <p>
+              <span contenteditable="true">100</span>
+            </p>
+          </div>
+        </div>
+        <div class="v-line">
+          <p>
+            <span contenteditable="true">100</span>
+          </p>
+          <p>
+            <span contenteditable="true">100</span>
+          </p>
+          <p>
+            <span contenteditable="true">100</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="master-panel">
+      <button class="btn" id="initialize">Reset</button>
+      <button class="btn" id="export">Generate</button>
+    </div>
+  </div>
+  <section class="mod capture-modal hidden"></section>
+  <div class="mod overlay hidden"></div>
+  <script src="app.js"></script>
+</body>
+
+</html>
